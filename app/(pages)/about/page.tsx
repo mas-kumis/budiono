@@ -1,7 +1,7 @@
 import React from "react";
 
 const page = () => {
-  return <div>Wildan</div>;
+  return <div>Aboutgi</div>;
 };
 
 export default page;
