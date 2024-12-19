@@ -9,19 +9,19 @@ const Sidebar = () => {
         <Link href="#" className="hover:text-lime-400">
           Dashboard
         </Link>
-        <Link href="#" className="hover:text-lime-400">
+        <Link href="/dashboard" className="hover:text-lime-400">
           Catalog
         </Link>
-        <Link href="#" className="hover:text-lime-400">
+        <Link href="/dashboard/customer" className="hover:text-lime-400">
           Customers
         </Link>
-        <Link href="#" className="hover:text-lime-400">
+        <Link href="/dashboard/market" className="hover:text-lime-400">
           Market
         </Link>
-        <Link href="#" className="hover:text-lime-400">
+        <Link href="/dashboard/farmers" className="hover:text-lime-400">
           Farmers
         </Link>
-        <Link href="#" className="hover:text-lime-400">
+        <Link href="/dashboard/orders" className="hover:text-lime-400">
           Orders
         </Link>
         <Link href="#" className="hover:text-lime-400">
