@@ -1,10 +1,10 @@
+import React from "react";
 import Heading from "@/app/components/backend/Heading";
 import Card from "@/app/components/backend/Card";
 import SmallCard from "@/app/components/backend/SmallCard";
-import React from "react";
-import { Aperture, Container, Leaf, BadgeDollarSign } from "lucide-react";
-import BestSellingChart from "@/app/components/backend/BestSellingChart";
 import WeeklyChart from "@/app/components/backend/WeeklyChart";
+import BestSellingChart from "@/app/components/backend/BestSellingChart";
+import { Aperture, Container, Leaf, BadgeDollarSign } from "lucide-react";
 const cardData = [
   {
     color: "bg-red-400",
@@ -64,7 +64,7 @@ const page = () => {
   return (
     <div className="flex flex-col gap-4">
       {/* Heading */}
-      <Heading title="Catalogue" />
+      <Heading title="Catalogue List" />
       {/* Card */}
       <div className="grid grid-cols-5 mb-2 mt-4 gap-4">
         {cardData.map((card, index) => (
