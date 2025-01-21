@@ -4,13 +4,13 @@ import { ChevronDown } from "lucide-react";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="flex tems-center justify-between px-[100px] py-[50px] items-center">
+    <div className="flex tems-center justify-between px-[30px] md:px-[50px] lg:px-[100px] py-[30px] md:py-[50px] items-center">
       <div className="font-bold text-5xl">Travel</div>
-      <div className="font-bold text-[19px] flex gap-8">
+      <div className="font-bold text-[19px] gap-8 hidden lg:flex">
         <div className="hover:text-[#DF6951] hover:cursor-pointer">Home</div>
         <div className="hover:text-[#DF6951] hover:cursor-pointer">About</div>
         <div
-          className=" hover:text-[#DF6951] hover:cursor-pointer flex items-center gap-2"
+          className=" hover:text-[#413b3a] hover:cursor-pointer flex items-center gap-2"
           onClick={() => setIsOpen(!isOpen)}
         >
           <p>Service</p>
@@ -25,7 +25,7 @@ const Navbar = () => {
           Upcomming Packages
         </div>
       </div>
-      <div className="text-white bg-[#DF6951] hover:bg-[#ec6247] hover:cursor-pointer text-[19px] font-bold px-6 py-4 rounded-lg">
+      <div className="text-white bg-[#DF6951] hover:bg-[#ec6247] hover:cursor-pointer text-[19px] font-bold px-4 md:px-6 py-4 rounded-lg">
         Get in Touch
       </div>
     </div>

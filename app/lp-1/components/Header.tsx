@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <div className="h-[976px] min-w-screen container">
       <Navbar />
-      <Jumbotron />
+      <div className="">
+        <Jumbotron />
+      </div>
     </div>
   );
 };
