@@ -23,6 +23,13 @@
   background-attachment: fixed;
 }
 
+.tagline {
+  min-width: 100%;
+  background-image: url("../public/Tagline.png");
+  background-size: ; /* or contain, or specific dimensions */
+  background-repeat: no-repeat;
+}
+
 body {
   color: var(--foreground);
   background: var(--background);
