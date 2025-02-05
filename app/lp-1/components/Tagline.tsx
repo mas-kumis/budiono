@@ -11,7 +11,6 @@ const Tagline = () => {
           <h5 className="text-white text-[50px]">
             Let’s make your next holiday amazing
           </h5>
-          <div></div>
         </div>
       </div>
     </div>

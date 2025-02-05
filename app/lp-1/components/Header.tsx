@@ -4,7 +4,10 @@ import Jumbotron from "./Jumbotron";
 
 const Header = () => {
   return (
-    <div className="h-[976px] min-w-screen container">
+    <div
+      className="h-[976px] min-w-screen bg-cover bg-no-repeat bg-center bg-fixed"
+      style={{ backgroundImage: "url('./Jumbotron.png')" }}
+    >
       <Navbar />
       <div className="">
         <Jumbotron />

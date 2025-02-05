@@ -17,7 +17,7 @@ const Jumbotron = () => {
             <div className="h-[30px] bg-white w-[3px] hidden md:block"></div>
             <div>Travel Type</div>
             <div className="h-[30px] bg-white w-[3px] hidden md:block"></div>
-            <div>Duration</div>
+            <div>Duration</div>w
             <div className="h-[30px] bg-white w-[3px] hidden md:block"></div>
             <div className=" bg-[#DF6951] hover:bg-[#f05e41] hover:cursor-pointer hover:shadow-2xl px-12 py-4 rounded-lg text-center">
               Submit{" "}
@@ -25,13 +25,13 @@ const Jumbotron = () => {
           </div>
           {/* Avatar */}
           <div className="flex  flex-col lg:flex-row gap-2 lg:items-center mt-8">
-            <div className="flex -space-x-1 overflow-hidden">
-              <div className="inline-block size-12 rounded-full ring-2 bg-[#DF6951] ring-white"></div>
-              <div className="inline-block size-12 rounded-full ring-2 bg-[#DF6951] ring-white"></div>
-              <div className="inline-block size-12 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
-              <div className="inline-block size-12 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
-              <div className="inline-block size-12 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
-            </div>
+            {/* <div className="flex -space-x-1 overflow-hidden">
+              <div className="inline-block size-10 rounded-full ring-2 bg-[#DF6951] ring-white"></div>
+              <div className="inline-block size-10 rounded-full ring-2 bg-[#DF6951] ring-white"></div>
+              <div className="inline-block size-10 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
+              <div className="inline-block size-10 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
+              <div className="inline-block size-10 rounded-full ring-2  bg-[#DF6951] ring-white"></div>
+            </div> */}
             <p className="font-semibold">
               2,500 people booked Tommorowland Event in last 24 hours
             </p>
