@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 const Features = () => {
   return (
-    <div className="w-full my-[50px] px-[30px] md:px-[100px] lg:px-[150px] gap-4 place-items-center grid grid-cols-1 lg:grid-cols-3">
+    <div className="w-full my-[50px] px-[30px] md:px-[100px] gap-8 place-items-center grid grid-cols-1 lg:grid-cols-3">
       <div>
         <Image
           src="/features-1.png"
@@ -11,7 +11,7 @@ const Features = () => {
           height={462}
         />
         <div className="flex-col flex w-full items-center justify-center text-center my-[20px]">
-          <h6 className="font-bold text-[30px]">Bahan Berkualitas Tinggi</h6>
+          <h6 className="font-bold text-[30px]">Bahan Berkualitas</h6>
           <p className="text-center w-[350px]">
             Tidak mudah kusut, Tidak mudah luntur, dan Tahan Lama.{" "}
           </p>
