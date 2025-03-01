@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Casata Pashmina",
-  description: "Pashmina Nyaman dan Stylish untuk Setiap Gaya",
+  title: "Budiono - Minimal Blog Template",
+  description: "Design by SimpleSmart in Figma",
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-// Produxt
+// Produxtnp
 const Features = () => {
   return (
     <div className="w-full my-[50px] px-[30px] md:px-[100px] gap-8 place-items-center grid grid-cols-1 lg:grid-cols-3">
