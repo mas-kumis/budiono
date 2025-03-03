@@ -35,26 +35,26 @@ const Navbar = () => {
       ref={menuRef}
     >
       <div className="  flex justify-between items-center">
-        <p className="text-white">BUDIONO</p>
+        <p className="text-white font-bold">BUDIONO</p>
         <div
           className="block lg:hidden text-white cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           <AlignJustify />
         </div>
-        <div className="lg:flex gap-8 hidden text-white     ">
-          <ul className="flex gap-8">
+        <div className="lg:flex lg:divide-x-2 lg:divide-white hidden text-white     ">
+          <ul className="flex  gap-8 px-8">
             <li>Home</li>
             <li>About</li>
             <li>Articles</li>
             <li>Contact Us</li>
           </ul>
-          <ul className="flex gap-8">
+          <ul className="flex gap-8 px-8">
             <Twitter />
             <Instagram />
             <Youtube />
           </ul>
-          <div>
+          <div className="pl-8">
             <Search />
           </div>
         </div>

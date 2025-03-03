@@ -1,8 +1,5 @@
-// import CTA from "./components/CTA";
-// import Features from "./components/Features";
 import Headers from "./components/Headers";
 import Navbar from "./components/Navbar";
-// import Text from "./components/Text";
 
 export default function Home() {
   return (
@@ -14,9 +11,6 @@ export default function Home() {
         <Navbar />
         <Headers />
       </div>
-      {/* <Features />
-      <Text />
-      <CTA /> */}
     </div>
   );
 }
