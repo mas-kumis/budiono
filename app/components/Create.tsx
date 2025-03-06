@@ -31,7 +31,9 @@ const Create = () => {
         setPrice("");
         setCategory("");
       } else {
-        alert(result.message);
+        toast.error(result.message, {
+          position: "top-center",
+        });
       }
     } catch (error) {
       console.log(error);
@@ -60,8 +62,9 @@ const Create = () => {
             step="0.01"
             value={price}
             onChange={(e) => setPrice(e.target.value)}
-            type="float"
+            type="number"
             name="price"
+            autoComplete="off"
             className="bg-gray-200 px-2 py-1"
           />
         </label>
