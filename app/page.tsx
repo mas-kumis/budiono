@@ -1,8 +1,8 @@
 import Headers from "./components/Headers";
 import Navbar from "./components/Navbar";
-import Popular from "./components/Popular";
-// import Create from "./components/Create";
-// import Product from "./components/Product";
+// import Popular from "./components/Popular";
+import Create from "./components/Create";
+import Product from "./components/Product";
 
 export default function Home() {
   return (
@@ -14,9 +14,9 @@ export default function Home() {
         <Navbar />
         <Headers />
       </div>
-      <Popular />
-      {/* <Create />
-      <Product /> */}
+      {/* <Popular /> */}
+      <Create />
+      <Product />
     </div>
   );
 }

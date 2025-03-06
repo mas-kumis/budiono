@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
 const Create = () => {
   const [title, setTitle] = useState("");
@@ -23,7 +24,9 @@ const Create = () => {
       const result = await response.json();
 
       if (response.ok) {
-        alert("Product Created");
+        toast.success("Product created successfully", {
+          position: "top-center",
+        });
         setTitle("");
         setPrice("");
         setCategory("");
@@ -32,6 +35,9 @@ const Create = () => {
       }
     } catch (error) {
       console.log(error);
+      toast.error("Product created successfully", {
+        position: "top-center",
+      });
     }
   };
 
@@ -80,6 +86,7 @@ const Create = () => {
           Create
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };
