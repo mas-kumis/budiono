@@ -14,7 +14,7 @@ const Popular = () => {
         <p>Technology</p>
         <p>Branding</p>
       </div>
-      <div className="my-[20px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
+      <div className="my-[20px] grid grid-cols-2 lg:grid-cols-4 gap-2 md:gap-4">
         <div className="w-full h-[280px] md:h-[300px]  lg:h-[400px] bg-lime-100">
           <div className="flex flex-col h-full">
             <div
