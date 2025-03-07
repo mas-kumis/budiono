@@ -34,14 +34,63 @@ const Popular = () => {
             </div>
           </div>
         </div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
-        <div className="w-full h-[180px] md:h-[280px]  lg:h-[300px] bg-lime-400"></div>
+        <div className="w-full h-[280px] md:h-[300px]  lg:h-[400px] bg-lime-100">
+          <div className="flex flex-col h-full">
+            <div
+              className="h-[100px]  md:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+              style={{ backgroundImage: 'url("/popular.png")' }}
+            ></div>
+            <div className="flex flex-col justify-between my-2">
+              <p className="text-[8px] lg:text-[12px] font-thin">08.08.2021</p>
+              <p className="text-[12px] lg:text-[18px] font-bold">
+                Dream destinations to visit this year in Paris
+              </p>
+              <p className="text-[8px] lg:text-[12px] font-thin">
+                Progressively incentivize cooperative systems through
+                technically sound functionalities. Credibly productivate
+                seamless data with flexible schemas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-[280px] md:h-[300px]  lg:h-[400px] bg-lime-100">
+          <div className="flex flex-col h-full">
+            <div
+              className="h-[100px]  md:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+              style={{ backgroundImage: 'url("/popular.png")' }}
+            ></div>
+            <div className="flex flex-col justify-between my-2">
+              <p className="text-[8px] lg:text-[12px] font-thin">08.08.2021</p>
+              <p className="text-[12px] lg:text-[18px] font-bold">
+                Dream destinations to visit this year in Paris
+              </p>
+              <p className="text-[8px] lg:text-[12px] font-thin">
+                Progressively incentivize cooperative systems through
+                technically sound functionalities. Credibly productivate
+                seamless data with flexible schemas.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-[280px] md:h-[300px]  lg:h-[400px] bg-lime-100">
+          <div className="flex flex-col h-full">
+            <div
+              className="h-[100px]  md:h-[150px] lg:h-[250px] w-full bg-cover bg-center"
+              style={{ backgroundImage: 'url("/popular.png")' }}
+            ></div>
+            <div className="flex flex-col justify-between my-2">
+              <p className="text-[8px] lg:text-[12px] font-thin">08.08.2021</p>
+              <p className="text-[12px] lg:text-[18px] font-bold">
+                Dream destinations to visit this year in Paris
+              </p>
+              <p className="text-[8px] lg:text-[12px] font-thin">
+                Progressively incentivize cooperative systems through
+                technically sound functionalities. Credibly productivate
+                seamless data with flexible schemas.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
