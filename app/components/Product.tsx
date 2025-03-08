@@ -11,7 +11,13 @@ type Product = {
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [selectedProduct, setSelectedProduct] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
+  const handleclick = (product: Product) => {
+    setSelectedProduct(product);
+    setOpenModal(true);
+  };
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -55,7 +61,7 @@ const Product = () => {
                 <td className="py-2 px-4">{product.category}</td>
                 <td className="py-2 px-4">
                   <button
-                    onClick={() => setSelectedProduct(true)}
+                    onClick={() => handleclick(product)}
                     className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
                   >
                     Update
@@ -68,7 +74,12 @@ const Product = () => {
             ))}
           </tbody>
         </table>
-        {products && selectedProduct && <ModalEdit />}
+        {openModal && selectedProduct && (
+          <ModalEdit
+            product={selectedProduct}
+            onClose={() => setOpenModal(false)}
+          />
+        )}
       </div>
     </div>
   );
