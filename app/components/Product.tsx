@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-
+import ModalEdit from "./ModalEdit";
 type Product = {
   id: number;
   title: string;
@@ -11,7 +11,7 @@ type Product = {
 const Product = () => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const [selectedProduct, setSelectedProduct] = useState(false);
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -54,7 +54,10 @@ const Product = () => {
                 <td className="py-2 px-4">${product.price}</td>
                 <td className="py-2 px-4">{product.category}</td>
                 <td className="py-2 px-4">
-                  <button className="bg-blue-500 text-white px-2 py-1 rounded mr-2">
+                  <button
+                    onClick={() => setSelectedProduct(true)}
+                    className="bg-blue-500 text-white px-2 py-1 rounded mr-2"
+                  >
                     Update
                   </button>
                   <button className="bg-red-500 text-white px-2 py-1 rounded">
@@ -65,6 +68,7 @@ const Product = () => {
             ))}
           </tbody>
         </table>
+        {products && selectedProduct && <ModalEdit />}
       </div>
     </div>
   );
