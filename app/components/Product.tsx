@@ -9,7 +9,7 @@ type Product = {
 };
 
 const Product = () => {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState(true);
   const [openModal, setOpenModal] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
@@ -17,6 +17,21 @@ const Product = () => {
   const handleclick = (product: Product) => {
     setSelectedProduct(product);
     setOpenModal(true);
+  };
+
+  const handleDelete = (product: Product) => {
+    fetch(`http://localhost:3000/api/products/${product.id}`, {
+      method: "DELETE",
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setProducts((prevProducts) =>
+          prevProducts.filter((p) => p.id !== product.id)
+        );
+      })
+      .catch((error) => {
+        console.error("Error deleting product:", error);
+      });
   };
   useEffect(() => {
     const fetchProducts = async () => {
@@ -66,7 +81,10 @@ const Product = () => {
                   >
                     Update
                   </button>
-                  <button className="bg-red-500 text-white px-2 py-1 rounded">
+                  <button
+                    onClick={() => handleDelete(product)}
+                    className="bg-red-500 text-white px-2 py-1 rounded"
+                  >
                     Delete
                   </button>
                 </td>
@@ -78,6 +96,15 @@ const Product = () => {
           <ModalEdit
             product={selectedProduct}
             onClose={() => setOpenModal(false)}
+            onSave={(updatedProduct) => {
+              products.map((p) =>
+                p.id === updatedProduct.id
+                  ? (p.title = updatedProduct.title)
+                  : null
+              );
+              setProducts([...products]);
+              setOpenModal(false);
+            }}
           />
         )}
       </div>
