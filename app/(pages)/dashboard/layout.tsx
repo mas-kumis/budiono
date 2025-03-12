@@ -2,20 +2,19 @@ import Sidebar from "@/app/components/backend/Sidebar";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Budiono - Minimal Blog Template",
+  title: "Dashboard",
   description: "Design by SimpleSmart in Figma",
 };
 
-export default function RootLayout({
+export default function DashboardLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="flex h-screen">
-        <Sidebar />
-        {children}</body>
-    </html>
+    <div className="flex h-screen">
+      <Sidebar />
+      <div className="px-[300px]"> {children}</div>
+    </div>
   );
 }
