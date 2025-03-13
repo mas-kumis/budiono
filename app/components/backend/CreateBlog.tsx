@@ -1,6 +1,8 @@
-import React from "react";
+'use client'
+import React, {useState} from "react";
 
 const CreateBlog = () => {
+  const [title,setTitle] = useState('')
   return (
     <div className="py-[80px]">
       <h6 className="text-3xl font-bold">Create Dashboard</h6>
@@ -9,6 +11,8 @@ const CreateBlog = () => {
           <div className="flex flex-col">
             <label htmlFor="title">Title</label>
             <input
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
               type="text"
               name="title"
               id="title"
