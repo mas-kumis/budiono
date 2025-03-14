@@ -1,8 +1,9 @@
-'use client'
-import React, {useState} from "react";
+"use client";
+import React, { useState } from "react";
 
 const CreateBlog = () => {
-  const [title,setTitle] = useState('')
+  const [title, setTitle] = useState("");
+  const [blog, setBlog] = useState("");
   return (
     <div className="py-[80px]">
       <h6 className="text-3xl font-bold">Create Dashboard</h6>
@@ -11,8 +12,8 @@ const CreateBlog = () => {
           <div className="flex flex-col">
             <label htmlFor="title">Title</label>
             <input
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
               type="text"
               name="title"
               id="title"
@@ -22,6 +23,8 @@ const CreateBlog = () => {
           <div className="flex flex-col">
             <label htmlFor="content">Content</label>
             <textarea
+              value={blog}
+              onChange={(e) => setBlog(e.target.value)}
               name="content"
               id="content"
               className="border-2 border-neutral-200 p-2"
