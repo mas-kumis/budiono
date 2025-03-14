@@ -1,11 +1,17 @@
 "use client";
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
 
-  const handleClick = () =.
+  const handleClick = (e : React.FormEvent) => {
+    e.preventDefault();
+    toast.success("Blog created successfully" + title + blog, {
+      position: "top-center",
+    });
+  };
   return (
     <div className="py-[80px]">
       <h6 className="text-3xl font-bold">Create Dashboard</h6>
@@ -41,7 +47,10 @@ const CreateBlog = () => {
               className="border-2 border-neutral-200 p-2"
             />
           </div>
-          <button onClick={handleCLick} className="bg-neutral-800 hover:bg-neutral-700 font-bold my-4 text-white p-2 rounded-md">
+          <button
+            onClick={handleClick}
+            className="bg-neutral-800 hover:bg-neutral-700 font-bold my-4 text-white p-2 rounded-md"
+          >
             Create
           </button>
         </form>
