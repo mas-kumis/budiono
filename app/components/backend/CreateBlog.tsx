@@ -6,7 +6,6 @@ const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
 
-  // Belum dikerjakan sama sekali 3 hari
   
   const handleClick = (e : React.FormEvent) => {
     e.preventDefault();
