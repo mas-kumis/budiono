@@ -6,15 +6,14 @@ const CreateBlog = () => {
   const [title, setTitle] = useState("");
   const [blog, setBlog] = useState("");
 
-  
-  const handleClick = (e : React.FormEvent) => {
+  const handleClick = (e: React.FormEvent) => {
     e.preventDefault();
     toast.success("Blog created successfully" + title + blog, {
       position: "top-center",
     });
   };
   return (
-    <div className="py-[80px]">
+    <div className="py-[40px]">
       <h6 className="text-3xl font-bold">Create Dashboard</h6>
       <div>
         <form className="flex flex-col my-4 gap-y-4">
