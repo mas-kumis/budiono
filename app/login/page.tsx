@@ -17,26 +17,6 @@ const page = () => {
       </p>
       <form className="my-8">
         <div className="flex flex-col space-y-2 md:space-y-4 md:space-x-2 mb-4">
-          <div className="flex flex-row space-x-2">
-            <div className="flex flex-col">
-              <Label htmlFor="firstName">First Name</Label>
-              <Input
-                id="firstName"
-                placeholder="First Name"
-                type="text"
-                name="firstName"
-              />
-            </div>
-            <div className="flex flex-col">
-              <Label htmlFor="lastName">Last Name</Label>
-              <Input
-                id="lastName"
-                placeholder="Last Name"
-                type="text"
-                name="lastName"
-              />
-            </div>
-          </div>
           <div>
             {" "}
             <Label>Email Adress</Label>
@@ -58,9 +38,9 @@ const page = () => {
           </Button>
           <Link
             className="text-sm text-neutral-600 dark:text-neutral-300"
-            href={"/login"}
+            href={"/register"}
           >
-            Already User? Login
+            Not a User? Register
           </Link>
         </div>
       </form>
