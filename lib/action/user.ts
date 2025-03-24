@@ -36,6 +36,7 @@ const register = async (formData: FormData) => {
       id: user.id,
     };
   } catch (error) {
+    console.error(error);
     return {
       error: "Something went wrong",
     };
