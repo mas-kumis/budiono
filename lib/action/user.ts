@@ -18,7 +18,7 @@ const register = async (formData: FormData): Promise<void> => {
 
     if (existingUser) {
       throw new Error("User already exists");
-     }
+      }
     const hashedPassword = await bcrypt.hash(password.toString(), 10);
     await prisma.user.create({
       data: {
