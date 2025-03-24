@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { register } from "@/lib/action/user";
 import { Github } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -15,26 +16,12 @@ const page = () => {
         {" "}
         Plase provide all the necessary information{" "}
       </p>
-      <form className="my-8">
+      <form action={register} className="my-8">
         <div className="flex flex-col space-y-2 md:space-y-4 md:space-x-2 mb-4">
           <div className="flex flex-row space-x-2">
             <div className="flex flex-col">
-              <Label htmlFor="firstName">First Name</Label>
-              <Input
-                id="firstName"
-                placeholder="First Name"
-                type="text"
-                name="firstName"
-              />
-            </div>
-            <div className="flex flex-col">
-              <Label htmlFor="lastName">Last Name</Label>
-              <Input
-                id="lastName"
-                placeholder="Last Name"
-                type="text"
-                name="lastName"
-              />
+              <Label htmlFor="name"> Name</Label>
+              <Input id="name" placeholder=" Name" type="text" name="name" />
             </div>
           </div>
           <div>
@@ -49,7 +36,12 @@ const page = () => {
           </div>
           <div>
             <Label>Password</Label>
-            <Input id="email" placeholder="****" type="password" name="email" />
+            <Input
+              id="password"
+              placeholder="****"
+              type="password"
+              name="password"
+            />
           </div>
           <Button>Sign Up</Button>
           <Button variant={"outline"}>
