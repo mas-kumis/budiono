@@ -1,45 +1,35 @@
 "use server";
 import { prisma } from "@/lib/prisma";
-const register = async (formData: FormData) => {
+import bcrypt from "bcryptjs";
+
+const register = async (formData: FormData): Promise<void> => {
+  const name = formData.get("name")?.toString();
+  const email = formData.get("email")?.toString();
+  const password = formData.get("password")?.toString();
+  if (!name || !email || !password) {
+    throw new Error("Please fill all the fields");
+  }
   try {
-    const name = formData.get("name");
-    const email = formData.get("email");
-    const password = formData.get("password");
-
-    if (!name || !email || !password) {
-      return {
-        error: "Please fill all the fields",
-      };
-    }
-
     const existingUser = await prisma.user.findUnique({
       where: {
-        email: email.toString(),
+        email: email,
       },
     });
 
     if (existingUser) {
-      return {
-        error: "User already exists",
-      };
-    }
-
-    const user = await prisma.user.create({
+      throw new Error("User already exists");
+     }
+    const hashedPassword = await bcrypt.hash(password.toString(), 10);
+    await prisma.user.create({
       data: {
-        email: email.toString(),
-        name: name.toString(),
-        password: password.toString(),
+        email: email,
+        name: name,
+        password: hashedPassword,
       },
     });
-
-    return {
-      id: user.id,
-    };
   } catch (error) {
-    console.error(error);
-    return {
-      error: "Something went wrong",
-    };
+    console.error("Error durinf registration", error);
+    throw new Error("Something went wrong");
   }
 };
 
