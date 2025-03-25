@@ -30,7 +30,7 @@ const ProfileForm = () => {
   async function onSubmit(values: z.infer<typeof RegisterSchema>) {
     register(values).then((res) => {
       console.log(res);
-    })
+    });
   }
   return (
     <div>
