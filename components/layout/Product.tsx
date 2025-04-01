@@ -6,7 +6,7 @@ const userSchema = z.object({
 });
 
 const user = {
-  firstName: "John",
+  firstName: "Wildan",
   lastName: "Doe",
 };
 
