@@ -7,7 +7,7 @@ const userSchema = z.object({
 
 const user = {
   firstName: "Wildan",
-  lastName: "Doe",
+  lastName: "Nurhansyah",
 };
 
 console.log(userSchema.safeParse(user));
