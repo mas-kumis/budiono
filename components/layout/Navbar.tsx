@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { ChevronDown, Search, ArrowUpRight } from "lucide-react";
+import { AlignJustify, ChevronDown, Search, ArrowUpRight } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -43,12 +43,12 @@ const navbarlist: NavList[] = [
 ];
 const Navbar: React.FC = () => {
   return (
-    <div className="bg-white px-[30px] md:px-[100px] py-4 flex  items-center justify-between">
+    <div className="bg-white px-[30px] lg:px-[100px] py-4 flex  items-center justify-between">
       <div className="flex space-x-2 items-center">
         <Image src={"/Images/Logo.png"} alt="Logo" width={50} height={50} />
         <p className="font-semibold text-[20px]">HOUSEFIND</p>
       </div>
-      <div className="hidden md:flex space-x-6 items-center ">
+      <div className="hidden lg:flex space-x-6 items-center ">
         {navbarlist.map((item, index) => (
           <div
             key={index}
@@ -59,22 +59,34 @@ const Navbar: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="hidden md:flex space-x-8 items-center">
+      <div className="hidden lg:flex space-x-8 items-center">
         <Search />
         <button className="bg-[#5856D5] px-4 py-3 items-center text-white flex space-x-2 rounded-lg">
           <p className="text-[14px]">View Listing</p>
           <ArrowUpRight size={14} strokeWidth={2} />
         </button>
       </div>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <Sheet>
-          <SheetTrigger>Open</SheetTrigger>
-          <SheetContent>
+          <SheetTrigger>
+            <div className="p-2 bg-[#5856D5] rounded-lg text-white">
+              <AlignJustify />
+            </div>
+          </SheetTrigger>
+          <SheetContent className="block lg:hidden">
             <SheetHeader>
-              <SheetTitle>Are you absolutely sure?</SheetTitle>
+              <SheetTitle></SheetTitle>
               <SheetDescription>
-                This action cannot be undone. This will permanently delete your
-                account and remove your data from our servers.
+                <div className="flex flex-col px-8 space-y-4 my-8">
+                  {navbarlist.map((item, index) => (
+                    <div
+                      key={index}
+                      className="items-center text-[#030E0F]  flex space-x-1 text-[14px]"
+                    >
+                      <Link href={item.link}>{item.name}</Link>
+                    </div>
+                  ))}
+                </div>
               </SheetDescription>
             </SheetHeader>
           </SheetContent>
