@@ -10,6 +10,7 @@ export default function Home() {
       <TopBar />
       <Navbar />
       <Headers />
+      <div className="h-[1000px]"></div>
     </div>
   );
 }

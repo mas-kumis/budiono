@@ -2,7 +2,7 @@ import React from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 const TopBar = () => {
   return (
-    <div className="bg-[rgb(153,153,153)] text-xs md:text-sm  md:px-[100px] py-2 text-white w-screen flex justify-center md:justify-between">
+    <div className="bg-[rgb(153,153,153)] text-xs md:text-sm  md:px-[100px] py-2 text-white w-full flex justify-center md:justify-between">
       <div className="flex space-x-4 items-center">
         <div className="flex items-center space-x-2">
           <Mail size={16} />
