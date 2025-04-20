@@ -98,7 +98,7 @@ const Navbar: React.FC = () => {
             </SheetTrigger>
             <SheetContent className="block lg:hidden">
               <SheetHeader>
-                <SheetTitle></SheetTitle>
+                <SheetTitle>Hm</SheetTitle>
                 <SheetDescription>
                   <div className="flex flex-col px-8 space-y-4 my-8">
                     {navbarlist.map((item, index) => (
