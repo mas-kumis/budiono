@@ -2,15 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { AlignJustify, ChevronDown, Search, ArrowUpRight } from "lucide-react";
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+  /*AlignJustify,*/ ChevronDown,
+  Search,
+  ArrowUpRight,
+} from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
 type NavList = {
@@ -89,32 +85,7 @@ const Navbar: React.FC = () => {
             <ArrowUpRight size={14} strokeWidth={2} />
           </button>
         </div>
-        <div className="block lg:hidden">
-          <Sheet>
-            <SheetTrigger>
-              <div className="p-2 bg-[#5856D5] rounded-lg text-white">
-                <AlignJustify />
-              </div>
-            </SheetTrigger>
-            <SheetContent className="block lg:hidden">
-              <SheetHeader>
-                <SheetTitle>Hm</SheetTitle>
-                <SheetDescription>
-                  <div className="flex flex-col px-8 space-y-4 my-8">
-                    {navbarlist.map((item, index) => (
-                      <div
-                        key={index}
-                        className="items-center text-[#030E0F]  flex space-x-1 text-[14px]"
-                      >
-                        <Link href={item.link}>{item.name}</Link>
-                      </div>
-                    ))}
-                  </div>
-                </SheetDescription>
-              </SheetHeader>
-            </SheetContent>
-          </Sheet>
-        </div>
+        <div className="block lg:hidden"></div>
       </motion.div>
     </AnimatePresence>
   );
