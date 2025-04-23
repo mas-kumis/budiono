@@ -130,6 +130,15 @@ const buildingData: Building[] = [
 
 const Featured = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [display, setDisplay] = useState<number>(3);
+
+  const filteredBuildings =
+    selectedCategory === "All"
+      ? buildingData
+      : buildingData.filter(
+          (building) => building.category === selectedCategory
+        );
+  const displayedBuildings = filteredBuildings.slice(0, display);
   return (
     <div className="px-[30px] md:px-[100px] bg-slate-100 py-[100px]">
       {/* Title */}
@@ -144,7 +153,10 @@ const Featured = () => {
       {/* Category */}
       <div className="flex flex-wrap items-center justify-center gap-4 my-[30px] ">
         <button
-          onClick={() => setSelectedCategory("All")}
+          onClick={() => {
+            setSelectedCategory("All");
+            setDisplay(3);
+          }}
           className={`text-center text-sm cursor-pointer flex items-center space-x-1 px-6 rounded-sm py-2 ${
             selectedCategory === "All"
               ? "bg-[#073B3A] text-[#d3e6e5]"
@@ -159,7 +171,10 @@ const Featured = () => {
           <p>All</p>
         </button>
         <button
-          onClick={() => setSelectedCategory("Villas")}
+          onClick={() => {
+            setSelectedCategory("Villas");
+            setDisplay(3);
+          }}
           className={`text-center text-sm cursor-pointer flex items-center space-x-1 px-6 rounded-sm py-2 ${
             selectedCategory === "Villas"
               ? "bg-[#073B3A] text-[#d3e6e5]"
@@ -176,7 +191,10 @@ const Featured = () => {
           <p>Villas</p>
         </button>
         <button
-          onClick={() => setSelectedCategory("Appartment")}
+          onClick={() => {
+            setSelectedCategory("Appartment");
+            setDisplay(3);
+          }}
           className={`text-center text-sm cursor-pointer flex items-center space-x-1 px-6 rounded-sm py-2 ${
             selectedCategory === "Appartment"
               ? "bg-[#073B3A] text-[#d3e6e5]"
@@ -193,7 +211,10 @@ const Featured = () => {
           <p>Appartment</p>
         </button>
         <button
-          onClick={() => setSelectedCategory("House")}
+          onClick={() => {
+            setSelectedCategory("House");
+            setDisplay(3);
+          }}
           className={`text-center text-sm cursor-pointer flex items-center space-x-1 px-6 rounded-sm py-2 ${
             selectedCategory === "House"
               ? "bg-[#073B3A] text-[#d3e6e5]"
@@ -213,7 +234,7 @@ const Featured = () => {
       {/* Featured Product */}
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {buildingData.map((building) => (
+          {displayedBuildings.map((building) => (
             <div
               key={building.id}
               className="bg-white shadow-md rounded-lg p-4 flex flex-col"

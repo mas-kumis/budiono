@@ -5,7 +5,9 @@ import TopBar from "../components/layout/TopBar";
 import Headers from "../components/layout/Headers";
 import About from "@/components/layout/About";
 import Featured from "@/components/layout/Featured";
-import AboutSection from "@/components/layout/AboutSection";
+import HelpSection from "@/components/layout/HelpSection";
+import FeaturedItemsCarousel from "@/components/layout/FeaturedItemCarousel";
+
 export default function Home() {
   return (
     <div>
@@ -13,8 +15,9 @@ export default function Home() {
       <Navbar />
       <Headers />
       <About />
-      <AboutSection />
       <Featured />
+      <HelpSection />
+      <FeaturedItemsCarousel />
       <div className="h-[1000px]"></div>
     </div>
   );
